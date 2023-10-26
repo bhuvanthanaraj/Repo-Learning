@@ -1,0 +1,48 @@
+﻿
+@model List<Learning.Models.Domain.Tag>
+
+
+
+@{
+}
+<div class="container py-4">
+    <h4>list of details</h4>
+</div>
+
+<div class="container py-5">
+    @if (Model!= null && Model.Any())
+    {
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Display Name</th>
+                    <th>   </th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                @foreach (var tem in Model)
+                {
+                    <tr>
+                        <td>@tem.ID</td>
+                        <td>@tem.Name</td>
+                        <td>@tem.Description</td>
+                        <td><a asp-area="" asp-controller="Admin" asp-action="Edit" asp-route-id="@tem.ID">Edit</a></td>
+                    </tr>
+                }
+
+            </tbody>
+
+        </table>
+
+        
+    }
+    else
+    {
+        <p>Sorry! No List found!</p>
+    }
+</div>

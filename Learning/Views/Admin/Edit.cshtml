@@ -1,0 +1,37 @@
+﻿@model Learning.Models.Domain.Tag
+
+@{
+}
+
+<div class="container">
+
+    <h2> Edit Details</h2>
+</div>
+
+<div class="container py-3">
+
+    <form method="post">
+        <div class="mb-3">
+            <label class="form-label">ID</label>
+            <input type="text" class="form-control" id="ID" name="ID" readonly asp-for="ID" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input type="text" class="form-control" id="Name" name="Name" asp-for="Name" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Diplay Name</label>
+            <input type="text" class="form-control" id="Description" name="Description" asp-for="Description"/>
+        </div>
+
+
+        <div>
+            <button type="submit" class="btn btn-success">Update</button>
+            <button type="submit" class="btn btn-danger" asp-area="" asp-controller="Admin" asp-action="Delete">Delete</button>
+        </div>
+    </form>
+
+</div>
+
